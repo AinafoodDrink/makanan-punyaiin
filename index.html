@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Makanan & Minuman</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">FoodDrink</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#" id="cart-icon">🛒 <span id="cart-count">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Selamat Datang di FoodDrink</h1>
+            <p>Pesan makanan & minuman favoritmu dengan mudah dan cepat!</p>
+            <a href="#produk" class="btn">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- Produk -->
+    <section class="produk" id="produk">
+        <h2>🍔 Daftar Produk Kami 🍹</h2>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Cari produk..." onkeyup="searchProduct()" />
+        </div>
+
+        <div class="product-container" id="product-container">
+
+            <!-- Makanan -->
+            <div class="product-card" data-name="Burger Keju">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="Burger Keju">
+                <h3>Burger Keju</h3>
+                <p>Rp 25.000</p>
+                <button onclick="addToCart('Burger Keju', 25000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Pizza Mini">
+                <img src="image.jpg/Folder Baru/pizza.jpg.jpeg" alt="Pizza Mini">
+                <h3>Pizza Mini</h3>
+                <p>Rp 30.000</p>
+                <button onclick="addToCart('Pizza Mini', 30000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="ayam geprek">
+                <img src="image.jpg/Folder Baru/geprek.jpg - Salin.jpeg" alt="Ayam geprek">
+                <h3>Ayam geprek</h3>
+                <p>Rp 22.000</p>
+                <button onclick="addToCart('Ayam geprek', 22000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Nasi Goreng Spesial">
+                <img src="image.jpg/Folder Baru/nasi.jpg.jpeg" alt="Nasi Goreng Spesial">
+                <h3>Nasi Goreng Spesial</h3>
+                <p>Rp 20.000</p>
+                <button onclick="addToCart('Nasi Goreng Spesial', 20000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Mie Goreng Pedas">
+                <img src="image.jpg/Folder Baru/mie.jpg.jpeg" alt="Mie Goreng Pedas">
+                <h3>Mie Goreng Pedas</h3>
+                <p>Rp 18.000</p>
+                <button onclick="addToCart('Mie Goreng Pedas', 18000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Sate Ayam Madura">
+                <img src="image.jpg/Folder Baru/sate.jpg.jpeg" alt="Sate Ayam Madura">
+                <h3>Sate Ayam Madura</h3>
+                <p>Rp 28.000</p>
+                <button onclick="addToCart('Sate Ayam Madura', 28000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Bakso Urat">
+                <img src="image.jpg/Folder Baru/bakso.jpg.jpeg" alt="Bakso Urat">
+                <h3>Bakso Urat</h3>
+                <p>Rp 15.000</p>
+                <button onclick="addToCart('Bakso Urat', 15000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Rendang Padang">
+                <img src="image.jpg/Folder Baru/rendang.jpg.jpeg" alt="Rendang Padang">
+                <h3>Rendang Padang</h3>
+                <p>Rp 35.000</p>
+                <button onclick="addToCart('Rendang Padang', 35000)">Tambah ke Keranjang</button>
+            </div>
+
+            <!-- Minuman -->
+            <div class="product-card" data-name="Es Teh Manis">
+                <img src="image.jpg/Folder Baru/teh.jpg.jpeg" alt="Es Teh Manis">
+                <h3>Es Teh Manis</h3>
+                <p>Rp 8.000</p>
+                <button onclick="addToCart('Es Teh Manis', 8000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Kopi Latte">
+                <img src="image.jpg/Folder Baru/kopi,jpg.jpeg" alt="Kopi Latte">
+                <h3>Kopi Latte</h3>
+                <p>Rp 20.000</p>
+                <button onclick="addToCart('Kopi Latte', 20000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Jus Jeruk Segar">
+                <img src="image.jpg/Folder Baru/jeruk.jpg.jpeg" alt="Jus Jeruk Segar">
+                <h3>Jus Jeruk Segar</h3>
+                <p>Rp 15.000</p>
+                <button onclick="addToCart('Jus Jeruk Segar', 15000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-card" data-name="Es Campur">
+                <img src="image.jpg/Folder Baru/es.jpg - Salin.jpeg" alt="Es Campur">
+                <h3>Es Campur</h3>
+                <p>Rp 12.000</p>
+                <button onclick="addToCart('Es Campur', 12000)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keranjang -->
+    <div class="cart" id="cart">
+        <h3>🛍️ Keranjang Belanja</h3>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: Rp <span id="cart-total">0</span></strong></p>
+        <button id="checkout-btn">Checkout</button>
+        <button id="close-cart">Tutup</button>
+    </div>
+
+    <!-- Pesan sukses -->
+    <div class="checkout-message" id="checkout-message">
+        <div class="message-box">
+            <h3>✅ Pesanan Berhasil!</h3>
+            <p>Terima kasih sudah memesan di <strong>FoodDrink</strong>. Pesananmu sedang diproses!</p>
+            <button onclick="closeMessage()">Tutup</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
